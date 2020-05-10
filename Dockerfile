@@ -7,6 +7,11 @@ RUN apk update && \
     npm install -g npm && \
     npm install -g create-nuxt-app processmd
 
+COPY . .
+
+RUN npm install
+RUN npm run generate
+
 ENV HOST 0.0.0.0
 EXPOSE 3000
 CMD ["npm", "run", "dev"]

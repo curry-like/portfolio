@@ -1,4 +1,4 @@
-const { sourceFileArray } = import('./contents/summary.json')
+const { sourceFileArray } = require('./contents/summary.json')
 
 const sourceFileNameToUrl = (filepath) => {
   const deleteExt = filepath.replace('.md', '')
@@ -19,17 +19,21 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'curry-like portfolio',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: 'curry-likeのポートフォリオです。'
       }
     ],
-    link: [{ rel: 'icon', type: 'images/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'images/x-icon', href: '/favicon.ico' },
+      { rel: 'shortcut icon', size: '196x196', href: '/favicon.ico' },
+      { rel: 'apple-touch-icon', href: '/favicon.ico' }
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -56,7 +60,8 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+    '@nuxtjs/sitemap'
   ],
   /*
    ** Axios module configuration
@@ -81,5 +86,10 @@ export default {
   },
   generate: {
     routes: generateDynamicRoutes
+  },
+  sitemap: {
+    hostname: process.env.BASE_URL || 'http://localhost:3000',
+    path: '/sitemap.xml',
+    generate: true
   }
 }
