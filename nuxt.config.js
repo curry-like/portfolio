@@ -4,7 +4,7 @@ const sourceFileNameToUrl = (filepath) => {
   const deleteExt = filepath.replace('.md', '')
   const fileName = deleteExt.split('/')[deleteExt.split('/').length - 1]
   const splitArray = fileName.split('_')
-  return `/posts/${splitArray[0]}/${splitArray[1]}`
+  return `/articles/${splitArray[0]}/${splitArray[1]}`
 }
 const generateDynamicRoutes = (callback) => {
   const routes = sourceFileArray.map((sourceFileName) => {
