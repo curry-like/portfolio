@@ -36,7 +36,7 @@ jobs:
 
     - name: generate
       run: |
-        processmd "contents/**/*.{yml,md}" --stdout --preview 100 --outputDir contents/json > contents/summary.json
+        npm run processmd
         npm run generate
 
     - name: deploy

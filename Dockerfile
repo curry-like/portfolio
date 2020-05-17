@@ -9,8 +9,8 @@ RUN apk update && \
 
 COPY . .
 
-RUN npm install
-RUN npm run generate
+RUN npm clean-install
+#RUN npm run generate
 
 ENV HOST 0.0.0.0
 EXPOSE 3000
