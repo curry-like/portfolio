@@ -35,6 +35,8 @@ jobs:
         npm install
 
     - name: generate
+      env:
+        BASE_URL: https://curry-like.github.io/g
       run: |
         npm run processmd
         npm run generate
