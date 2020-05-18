@@ -61,7 +61,13 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/markdownit',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: 'UA-166937377-1'
+      }
+    ]
   ],
   /*
    ** Axios module configuration
