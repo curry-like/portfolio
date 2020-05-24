@@ -69,6 +69,12 @@ Nuxt.js の公式ページでは Travis CI を使用する例が記載されて�
 
 Github Pages の場合、repository 名が 「<USER_NAME>.github.io」ではない場合は静的ファイルを配置する directory を指定できたり、master 以外のブランチを後悔できたりするので、master にマージされるとリリースのような流れにできるかなと思います。
 
+### Google への indexについて
+Google にインデックスさせるためには Search Console から URL を登録する必要があります。
+今回は sitemap.xml を自動で生成するプラグインを導入し、そのプラグインを Search Console に登録することで Google Bot にクローリングしてもらうようにしています。
+
+そのほかにも Google Analytics もプラグインを入れるだけで運用できます。
+
 ## 料金について
 Github Pagesを使用しているので、特に料金はかかっていません。
 独自のドメインを使用したり、自分でサーバーを立てたりするとその料金がかかりますが、ミニマムな構成で構築すればドメイン料金程度で運用できるかと思います。
