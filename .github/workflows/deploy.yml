@@ -36,7 +36,7 @@ jobs:
 
     - name: generate
       env:
-        BASE_URL: https://curry-like.github.io/g
+        BASE_URL: https://curry-like.github.io
       run: |
         npm run processmd
         npm run generate
