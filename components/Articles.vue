@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
+import { Component, Prop, Vue } from 'nuxt-property-decorator'
 import moment from 'moment'
 import ArticleSummaryCard from '~/components/ArticleSummary.vue'
 import { ArticleSummary } from '~/types/ArticleSummary'
@@ -22,21 +22,31 @@ import { ArticleSummary } from '~/types/ArticleSummary'
   components: { ArticleSummary: ArticleSummaryCard }
 })
 export default class ArticleList extends Vue {
+  @Prop({ type: String, required: false, default: '' })
+  tag!: string
+
   articles: Array<ArticleSummary> = []
 
   created() {
     const data = this.$store.getters['article/getFileMap']
-
-    Object.keys(data).forEach((val, i) => {
-      const article: ArticleSummary = {
-        id: i,
-        title: data[val].title,
-        slug: data[val].sourceBase.replace('.md', '').split('_')[1],
-        image: data[val].image,
-        date: moment(data[val].created_at).format('YYYY-MM-DD')
-      }
-      this.articles.unshift(article)
-    })
+    Object.keys(data)
+      .filter((val) => {
+        if (this.tag !== '') {
+          return data[val].tags.split(',').includes(this.tag)
+        } else {
+          return true
+        }
+      })
+      .forEach((val, i) => {
+        const article: ArticleSummary = {
+          id: i,
+          title: data[val].title,
+          slug: data[val].sourceBase.replace('.md', '').split('_')[1],
+          image: data[val].image,
+          date: moment(data[val].created_at).format('YYYY-MM-DD')
+        }
+        this.articles.unshift(article)
+      })
   }
 }
 </script>

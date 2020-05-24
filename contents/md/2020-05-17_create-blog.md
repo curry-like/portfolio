@@ -1,7 +1,7 @@
 ---
 title: ブログ作りました。
 image: example.jpg
-tags: Nuxt.js,GKE
+tags: Nuxt
 created_at: 2020-05-17
 ---
 
