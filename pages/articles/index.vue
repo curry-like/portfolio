@@ -7,7 +7,7 @@
     </b-row>
     <b-row>
       <b-col>
-        <Articles class="articles" />
+        <Articles class="articles" :tag="tag" />
       </b-col>
     </b-row>
   </b-container>
@@ -22,7 +22,13 @@ import Articles from '~/components/Articles.vue'
     Articles
   }
 })
-export default class ArticleList extends Vue {}
+export default class ArticleList extends Vue {
+  asyncData({ query }: { query: any }) {
+    return {
+      tag: query.tag
+    }
+  }
+}
 </script>
 
 <style lang="scss"></style>

@@ -11,7 +11,7 @@
         variant="primary"
         class="tag"
       >
-        <nuxt-link :to="{ name: 'articles-tag', params: { tag: tag } }">
+        <nuxt-link :to="{ name: 'articles', query: { tag: tag } }">
           {{ tag }}
         </nuxt-link></b-badge
       >
