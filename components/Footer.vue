@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="footer-copyright text-center py-3">
       © 2020 Copyright:
-      <a href="/"> MDBootstrap.com</a>
+      <a href="/"> https://curry-like.github.io/</a>
     </div>
   </footer>
 </template>
