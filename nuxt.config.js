@@ -30,9 +30,9 @@ export default {
       }
     ],
     link: [
-      { rel: 'icon', type: 'images/x-icon', href: '/favicon.ico' },
-      { rel: 'shortcut icon', size: '196x196', href: '/favicon.ico' },
-      { rel: 'apple-touch-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'images/x-icon', href: '/images/icon.jpg' },
+      { rel: 'shortcut icon', size: '196x196', href: '/images/icon.jpg' },
+      { rel: 'apple-touch-icon', href: '/images/icon.jpg' }
     ]
   },
   /*

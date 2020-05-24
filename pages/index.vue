@@ -5,7 +5,7 @@
         <h2>Profile</h2>
         <b-row>
           <b-col cols="4">
-            <img src="/images/icon.png" alt="profile" class="profile-img" />
+            <img src="/images/icon.jpg" alt="profile" class="profile-img" />
           </b-col>
           <b-col cols="8">
             <p>curry-like</p>
