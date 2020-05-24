@@ -1,12 +1,46 @@
 <template>
   <div class="container">
-    <h1 class="post-title">{{ title }}</h1>
-    <div class="post-meta">
+    <div class="post-meta text-secondary">
       <time>{{ params.date }}</time>
+    </div>
+    <h1 class="post-title">{{ title }}</h1>
+    <div class="tags">
+      <b-badge
+        v-for="tag in tags.split(',')"
+        :key="tag"
+        variant="primary"
+        class="tag"
+      >
+        <nuxt-link :to="{ name: 'articles-tag', params: { tag: tag } }">
+          {{ tag }}
+        </nuxt-link></b-badge
+      >
     </div>
     <div class="post markdown-body" v-html="$md.render(bodyContent)"></div>
   </div>
 </template>
+
+<style lang="scss">
+.tag {
+  margin-right: 0.5rem;
+  a:link {
+    color: white;
+    text-decoration: none;
+  }
+  a:visited {
+    color: white;
+    text-decoration: none;
+  }
+  a:hover {
+    color: white;
+    text-decoration: none;
+  }
+  a:active {
+    color: white;
+    text-decoration: none;
+  }
+}
+</style>
 
 <script>
 import { Component, Vue } from 'nuxt-property-decorator'
