@@ -23,7 +23,7 @@ import Articles from '~/components/Articles.vue'
   }
 })
 export default class ArticleList extends Vue {
-  asyncData({ params }) {
+  asyncData({ params }: { params: any }) {
     return {
       tag: params.tag
     }
