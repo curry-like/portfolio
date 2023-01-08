@@ -13,7 +13,7 @@
     "processmd": "./processmd.sh"
   },
   "dependencies": {
-    "@nuxt/typescript-runtime": "^0.4.0",
+    "@nuxt/typescript-runtime": "^0.4.10",
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/google-analytics": "^2.2.3",
     "@nuxtjs/markdownit": "^1.2.9",
