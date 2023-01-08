@@ -23,7 +23,7 @@
     "bootstrap-vue": "^2.0.0",
     "jquery": "^3.5.1",
     "moment": "^2.29.4",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.15.8",
     "prismjs": "^1.29.0",
     "processmd": "^4.5.0"
   },
