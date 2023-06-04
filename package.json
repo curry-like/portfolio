@@ -28,7 +28,7 @@
     "processmd": "^4.5.0"
   },
   "devDependencies": {
-    "@nuxt/typescript-build": "^0.6.0",
+    "@nuxt/typescript-build": "^3.0.0",
     "@nuxtjs/eslint-config-typescript": "^1.0.0",
     "@nuxtjs/eslint-module": "^1.0.0",
     "babel-eslint": "^10.0.1",
